@@ -56,7 +56,9 @@ class MainActivity : AppCompatActivity() {
             binding.recyclerViewCard.adapter = adapter
             val newList = originalList.map { it.copy() } as ArrayList<User>
             //newList.reverse()
-            adapter.submitList(newList)
+            adapter.submitList(newList) {
+                binding.recyclerViewCard.smoothScrollToPosition(newList.size-1)
+            }
 
 
         }
@@ -74,7 +76,9 @@ class MainActivity : AppCompatActivity() {
             binding.recyclerViewCard.adapter = adapter
             val newList = originalList.map { it.copy() } as ArrayList<User>
             //newList.reverse()
-            adapter.submitList(newList)
+            adapter.submitList(newList) {
+                binding.recyclerViewCard.smoothScrollToPosition(newList.size-1)
+            }
 
         }
 
@@ -126,7 +130,9 @@ class MainActivity : AppCompatActivity() {
                 binding.recyclerViewCard.adapter = adapter
                 val newList = originalList.map { it.copy() } as ArrayList<User>
                 newList.reverse()
-                adapter.submitList(newList)
+                adapter.submitList(newList) {
+                    binding.recyclerViewCard.smoothScrollToPosition(newList.size-1)
+                }
                 if (result[0] != null) {
                     //  binding.textView5.add(result[0])
 
@@ -150,7 +156,9 @@ class MainActivity : AppCompatActivity() {
                 binding.recyclerViewCard.adapter = adapter
                 val newList = originalList.map { it.copy() } as ArrayList<User>
                 newList.reverse()
-                adapter.submitList(newList)
+                adapter.submitList(newList) {
+                    binding.recyclerViewCard.smoothScrollToPosition(newList.size-1)
+                }
                 if (result[0] != null) {
                     //  binding.textView5.add(result[0])
 
