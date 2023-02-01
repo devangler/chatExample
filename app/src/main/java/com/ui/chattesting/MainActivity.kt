@@ -152,10 +152,11 @@ class MainActivity : AppCompatActivity() {
                     )
                 )
 
-
+                Toast.makeText(this, "", Toast.LENGTH_SHORT).show()
                 binding.recyclerViewCard.adapter = adapter
                 val newList = originalList.map { it.copy() } as ArrayList<User>
                 newList.reverse()
+                
                 adapter.submitList(newList) {
                     binding.recyclerViewCard.smoothScrollToPosition(newList.size-1)
                 }
